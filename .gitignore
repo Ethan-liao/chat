@@ -20,14 +20,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 index.js
-
-# Chat
-
-Simple chat web-app
-
-## Tech used
-* React
-* Firebase
-* Firestore
-
-Working [link](https://chat-1d858.firebaseapp.com/)
