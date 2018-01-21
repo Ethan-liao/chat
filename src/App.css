@@ -1,0 +1,40 @@
+.navBar {
+  font-size: 30px;
+  text-align: center;
+  width:100%;
+  height:inherit;
+  background-color: gray;
+}
+
+.input-container {
+ width: 100%;
+ text-align: center;
+ position: fixed;
+ bottom: 16px;
+}
+
+.messages {
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ position: relative;
+ text-align: center;
+ top: 50%;
+}
+
+.message-wrapper {
+ width: 600px;
+ background-color: lightblue;
+}
+
+.owner {
+ text-align: left;
+}
+
+.guest {
+ text-align: right;
+}
+
+.input {
+ font-size: 30px;
+}
