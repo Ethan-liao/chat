@@ -1,0 +1,350 @@
+[debug] [2018-01-29T04:36:24.451Z] ----------------------------------------------------------------------
+[debug] [2018-01-29T04:36:24.453Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-29T04:36:24.453Z] CLI Version:   3.14.0
+[debug] [2018-01-29T04:36:24.453Z] Platform:      darwin
+[debug] [2018-01-29T04:36:24.453Z] Node Version:  v8.9.1
+[debug] [2018-01-29T04:36:24.454Z] Time:          Sun Jan 28 2018 22:36:24 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:24.454Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-29T04:36:24.469Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-29T04:36:24.470Z] > authorizing via signed-in user
+[debug] [2018-01-29T04:36:24.471Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-29T04:36:24.471Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/lvIShS1hPiUkfGrj09HKJCnWTK1PtLYk6mhdAXWVAeE',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jan 28 2018 22:36:24 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:24.660Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:36:24.690Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chat-1d858  
+ Sun Jan 28 2018 22:36:24 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:25.098Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:36:25.099Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chat-1d858/tokens  
+ Sun Jan 28 2018 22:36:25 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:25.664Z] <<< HTTP RESPONSE 200
+[info] 4
+[info] 
+[info] === Deploying to 'chat-1d858'...
+[info] 
+[info] i  deploying database, storage, firestore, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-01-29T04:36:25.918Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json?dryRun=true {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:36:25 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:26.305Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax is valid
+[debug] [2018-01-29T04:36:26.307Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/chat-1d858  
+ Sun Jan 28 2018 22:36:26 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:26.642Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-01-29T04:36:26.647Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:36:26 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:26.847Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-01-29T04:36:26.852Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:36:26 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:26.965Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-01-29T04:36:26.968Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:36:26 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:27.259Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:36:27.260Z] [rules] created ruleset projects/chat-1d858/rulesets/b994933e-1a08-4521-9f9c-6365febb782c
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-01-29T04:36:27.261Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:36:27 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:27.262Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/chat-1d858/databases/(default)/indexes  
+ Sun Jan 28 2018 22:36:27 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:27.537Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:36:27.538Z] [rules] created ruleset projects/chat-1d858/rulesets/74c9408e-91d7-445e-ac55-5591007ec9e9
+[debug] [2018-01-29T04:36:27.544Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-01-29T04:36:27.695Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/chat-1d858/uploads/-L4-BvXzHnSHyEsWLc--?fileCount=9&message=  
+ Sun Jan 28 2018 22:36:27 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:30.908Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:36:30.908Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 9 files uploaded successfully
+[info] i  database: releasing rules...
+[debug] [2018-01-29T04:36:32.137Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:36:32 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:32.383Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules released successfully
+[debug] [2018-01-29T04:36:32.385Z] [rules] releasing firebase.storage/chat-1d858.appspot.com with ruleset projects/chat-1d858/rulesets/b994933e-1a08-4521-9f9c-6365febb782c
+[debug] [2018-01-29T04:36:32.385Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com { name: 'projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com',
+  rulesetName: 'projects/chat-1d858/rulesets/b994933e-1a08-4521-9f9c-6365febb782c' } 
+ Sun Jan 28 2018 22:36:32 GMT-0600 (CST)
+[debug] [2018-01-29T04:36:32.468Z] <<< HTTP RESPONSE 404
+[debug] [2018-01-29T04:36:32.468Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-01-29T04:36:32.470Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:43:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:126:13)
+    at Request.emit (events.js:214:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at Object.onceWrapper (events.js:313:30)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-01-29T04:45:35.025Z] ----------------------------------------------------------------------
+[debug] [2018-01-29T04:45:35.026Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-29T04:45:35.026Z] CLI Version:   3.14.0
+[debug] [2018-01-29T04:45:35.026Z] Platform:      darwin
+[debug] [2018-01-29T04:45:35.026Z] Node Version:  v8.9.1
+[debug] [2018-01-29T04:45:35.027Z] Time:          Sun Jan 28 2018 22:45:35 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:35.027Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-29T04:45:35.038Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-29T04:45:35.038Z] > authorizing via signed-in user
+[debug] [2018-01-29T04:45:35.040Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chat-1d858  
+ Sun Jan 28 2018 22:45:35 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:35.940Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:45:35.941Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chat-1d858/tokens  
+ Sun Jan 28 2018 22:45:35 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:36.406Z] <<< HTTP RESPONSE 200
+[info] 4
+[info] 
+[info] === Deploying to 'chat-1d858'...
+[info] 
+[info] i  deploying database, storage, firestore, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-01-29T04:45:36.659Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json?dryRun=true {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:45:36 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:36.892Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax is valid
+[debug] [2018-01-29T04:45:36.894Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/chat-1d858  
+ Sun Jan 28 2018 22:45:36 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.194Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-01-29T04:45:37.197Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:45:37 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.332Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-01-29T04:45:37.335Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:45:37 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.441Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-01-29T04:45:37.444Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:45:37 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.630Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:45:37.630Z] [rules] created ruleset projects/chat-1d858/rulesets/af79e5df-a7f5-447d-a1b8-397d46625fbf
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-01-29T04:45:37.631Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:45:37 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.632Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/chat-1d858/databases/(default)/indexes  
+ Sun Jan 28 2018 22:45:37 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:37.796Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:45:37.797Z] [rules] created ruleset projects/chat-1d858/rulesets/5a332be2-757a-46cb-a142-8c20bcd88683
+[debug] [2018-01-29T04:45:37.936Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-01-29T04:45:38.086Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/chat-1d858/uploads/-L4-E0wC_auj45ZE6GT3?fileCount=9&message=  
+ Sun Jan 28 2018 22:45:38 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:40.324Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:45:40.324Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 9 files uploaded successfully
+[info] i  database: releasing rules...
+[debug] [2018-01-29T04:45:41.406Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:45:41 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:41.642Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules released successfully
+[debug] [2018-01-29T04:45:41.643Z] [rules] releasing firebase.storage/chat-1d858.appspot.com with ruleset projects/chat-1d858/rulesets/af79e5df-a7f5-447d-a1b8-397d46625fbf
+[debug] [2018-01-29T04:45:41.643Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com { name: 'projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com',
+  rulesetName: 'projects/chat-1d858/rulesets/af79e5df-a7f5-447d-a1b8-397d46625fbf' } 
+ Sun Jan 28 2018 22:45:41 GMT-0600 (CST)
+[debug] [2018-01-29T04:45:41.723Z] <<< HTTP RESPONSE 404
+[debug] [2018-01-29T04:45:41.724Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-01-29T04:45:41.725Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:43:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:126:13)
+    at Request.emit (events.js:214:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at Object.onceWrapper (events.js:313:30)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-01-29T04:49:01.133Z] ----------------------------------------------------------------------
+[debug] [2018-01-29T04:49:01.134Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-01-29T04:49:01.134Z] CLI Version:   3.14.0
+[debug] [2018-01-29T04:49:01.134Z] Platform:      darwin
+[debug] [2018-01-29T04:49:01.134Z] Node Version:  v8.9.1
+[debug] [2018-01-29T04:49:01.135Z] Time:          Sun Jan 28 2018 22:49:01 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:01.135Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-29T04:49:01.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-29T04:49:01.146Z] > authorizing via signed-in user
+[debug] [2018-01-29T04:49:01.148Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chat-1d858  
+ Sun Jan 28 2018 22:49:01 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:01.483Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:49:01.483Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chat-1d858/tokens  
+ Sun Jan 28 2018 22:49:01 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:01.867Z] <<< HTTP RESPONSE 200
+[info] 4
+[info] 
+[info] === Deploying to 'chat-1d858'...
+[info] 
+[info] i  deploying database, storage, firestore, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-01-29T04:49:02.065Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json?dryRun=true {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:49:02 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:02.250Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax is valid
+[debug] [2018-01-29T04:49:02.252Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/chat-1d858  
+ Sun Jan 28 2018 22:49:02 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:02.530Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-01-29T04:49:02.533Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:49:02 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:02.709Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-01-29T04:49:02.711Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858:test { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:49:02 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:02.827Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-01-29T04:49:02.831Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:49:02 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:03.044Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:49:03.044Z] [rules] created ruleset projects/chat-1d858/rulesets/52071bd0-b1e7-4cfb-86be-df77c9f32d31
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-01-29T04:49:03.045Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-1d858/rulesets { source: { files: [ [Object] ] } } 
+ Sun Jan 28 2018 22:49:03 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:03.046Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/chat-1d858/databases/(default)/indexes  
+ Sun Jan 28 2018 22:49:03 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:03.224Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:49:03.224Z] [rules] created ruleset projects/chat-1d858/rulesets/c348149b-173d-4f8a-9cb7-92368e640cf0
+[debug] [2018-01-29T04:49:03.342Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing build directory for upload...
+[debug] [2018-01-29T04:49:03.494Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/chat-1d858/uploads/-L4-Eo4NZmQEao5KN8OL?fileCount=9&message=  
+ Sun Jan 28 2018 22:49:03 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:05.666Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-29T04:49:05.667Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 9 files uploaded successfully
+[info] i  database: releasing rules...
+[debug] [2018-01-29T04:49:06.576Z] >>> HTTP REQUEST PUT https://chat-1d858.firebaseio.com/.settings/rules.json {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun Jan 28 2018 22:49:06 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:06.813Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules released successfully
+[debug] [2018-01-29T04:49:06.814Z] [rules] releasing firebase.storage/chat-1d858.appspot.com with ruleset projects/chat-1d858/rulesets/52071bd0-b1e7-4cfb-86be-df77c9f32d31
+[debug] [2018-01-29T04:49:06.814Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com { name: 'projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com',
+  rulesetName: 'projects/chat-1d858/rulesets/52071bd0-b1e7-4cfb-86be-df77c9f32d31' } 
+ Sun Jan 28 2018 22:49:06 GMT-0600 (CST)
+[debug] [2018-01-29T04:49:06.892Z] <<< HTTP RESPONSE 404
+[debug] [2018-01-29T04:49:06.892Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-01-29T04:49:06.894Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/chat-1d858/releases/firebase.storage/chat-1d858.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:43:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:126:13)
+    at Request.emit (events.js:214:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at Object.onceWrapper (events.js:313:30)
+[error] 
+[error] Error: An unexpected error has occurred.
