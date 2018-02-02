@@ -12,7 +12,7 @@ class RenderMessage extends Component {
             {messageKeys.map(messageKey => {
               if (this.props.messages[messageKey].authorKey === this.props.user) {
                 return (
-                    <div className='owner'>
+                    <div className='owner' contentEditable>
                       {`${this.props.messages[messageKey].authorKey}: ${this.props.messages[messageKey].body}`}
                     </div>
                 )

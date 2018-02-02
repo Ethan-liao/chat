@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header'
 import SearchBar from './components/SearchBar/SearchBar'
 import RenderMessage from './components/Messages/Messages'
+import Login from './components/Login/Login'
 
 const generateUniqueID = () => {
   return Math.floor((Math.random() * 10000000) + 1);
@@ -13,7 +14,7 @@ class App extends Component {
     super(props)
     this.state = {
       showModal: true,
-      currentUser:'Ping',
+      currentUser:'',
       // users: {},
       // messages: {},
       users: {
@@ -94,9 +95,6 @@ class App extends Component {
         authorKey: this.state.currentUser,
       }
     }
-
-    console.warn("this.sendMessage", messages)
-
     this.setState({
       messages
     })
@@ -112,33 +110,31 @@ checkStatus = (value) => {
   }
 }
 
+logout = () => {
+   this.setState({
+    currentUser:'',
+    showModal: true
+  })
+}
+
   render() {
 
     return (
       <div>
-        <div
-          className='modal'
-           style={{display:(this.state.showModal ? 'block':'none')}}>
-          <div
-            className='modal-content'>
-            Please enter a username
-            <input
-              type='text'
-              placeholder='type here'
-              ref={c => { this.userInfo = c}}
-            />
-            {/* so onclick is for buttons */}
-            <button
-              onClick={() => {
-                this.checkStatus(this.userInfo.value)
-              }}
-              >Submit</button>
-          </div>
+        <Login
+        showModal={this.state.showModal}
+        checkStatus={this.checkStatus}
+        />
+        <div className='heading navBar'>
+          Web Chat-App
         </div>
-
+        <button className='logout' onClick={this.logout}>
+          Logout
+        </button>
       <Header
         currentUserName={this.state.currentUser}
         messageCount={Object.keys(this.state.messages).length}/>
+
       <RenderMessage messages={this.state.messages} user={this.state.currentUser}/>
       <SearchBar
         //calling a function
