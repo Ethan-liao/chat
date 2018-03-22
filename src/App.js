@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Styles/App.css';
 import Header from './components/Header/Header'
-import SearchBar from './components/SearchBar/SearchBar'
+import InputBox from './components/InputBox/InputBox'
 import RenderMessage from './components/Messages/Messages'
 import Login from './components/Login/Login'
 
@@ -13,8 +13,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showModal: true,
-      currentUser:'',
+      showModal: false,
+      currentUser:'Ping',
       // users: {},
       // messages: {},
       users: {
@@ -40,7 +40,6 @@ class App extends Component {
         }
       }
     }
-    console.log('messages ', Object.keys(this.state.messages).length);
   }
 
   componentWillMount() {
@@ -63,7 +62,7 @@ class App extends Component {
       const messages = {}
       querySnapshot.forEach(doc => {
         messages[doc.id] = doc.data()
-        console.log(doc);
+        // console.log(doc);
       })
       this.setState({
         messages,
@@ -133,10 +132,12 @@ logout = () => {
         </button>
       <Header
         currentUserName={this.state.currentUser}
-        messageCount={Object.keys(this.state.messages).length}/>
+        messageCount={Object.keys(this.state.messages).length}
+      />
 
-      <RenderMessage messages={this.state.messages} user={this.state.currentUser}/>
-      <SearchBar
+      <RenderMessage messages={this.state.messages} user={this.state.currentUser}
+      />
+      <InputBox
         //calling a function
         onSubmit={(value) => {
           this.sendMessage(value)
