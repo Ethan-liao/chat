@@ -34,19 +34,19 @@ body {
 }
 
 /* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+// .close {
+//     color: #aaa;
+//     float: right;
+//     font-size: 28px;
+//     font-weight: bold;
+// }
+//
+// .close:hover,
+// .close:focus {
+//     color: black;
+//     text-decoration: none;
+//     cursor: pointer;
+// }
 
 
 
@@ -78,6 +78,13 @@ body {
  position: fixed;
  bottom: 16px;
 }
+.input {
+ font-size: 30px;
+}
+.box{
+  margin: 0 auto;
+  width: 50%
+}
 
 .messages {
  display: flex;
@@ -99,8 +106,4 @@ body {
 
 .guest {
  text-align: left;
-}
-
-.input {
- font-size: 30px;
 }
