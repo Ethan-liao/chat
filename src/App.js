@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Styles/App.css';
+import './Styles/CSS/App.css';
 import Header from './components/Header/Header'
 import InputBox from './components/InputBox/InputBox'
 import RenderMessage from './components/Messages/Messages'

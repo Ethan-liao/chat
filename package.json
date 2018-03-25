@@ -11,7 +11,7 @@
     "redux": "^3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start | sass --watch src/Styles/App.scss:src/Styles/App.css",
+    "start": "react-scripts start | sass --watch src/Styles/scss/App.scss:src/Styles//CSS/App.css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
