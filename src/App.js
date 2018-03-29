@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Styles/CSS/App.css';
-import Header from './components/Header/Header'
+import Nav from './components/Nav/Nav'
 import InputBox from './components/InputBox/InputBox'
 import RenderMessage from './components/Messages/Messages'
 import Login from './components/Login/Login'
@@ -124,13 +124,12 @@ logout = () => {
         showModal={this.state.showModal}
         checkStatus={this.checkStatus}
         />
-        <div className='heading navBar'>
+        <header className='navBar'>
           Web Chat-App
-        </div>
-        <button className='logout' onClick={this.logout}>
-          Logout
-        </button>
-      <Header
+        </header>
+
+      <Nav
+        logout={this.logout}
         currentUserName={this.state.currentUser}
         messageCount={Object.keys(this.state.messages).length}
       />
