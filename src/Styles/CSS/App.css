@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+/*------------------------- The Modal (background) -------------------------*/
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40% !important;
+  /* Could be more or less, depending on screen size */ }
+
+/* The Close Button */
+/*------------------------- End of Modal (background) -------------------------*/
+/*------------------------------Navigation-------------------------*/
+.navbar-toggler {
+  padding: 0 0 0 0 !important;
+  border: none !important; }
+
+.btn-sm {
+  margin: 0.6rem 0 !important; }
+
+.listContainer {
+  margin: 0 0 1.1rem 1.1rem; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*-------------------------END of Navigation------------------------*/
+/*-------------------------Start of input box------------------------*/
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.input-box {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin: 3% 0.5%;
+  width: 50%; }
+
+/*-------------------------end of input box------------------------*/
+/*-------------------------Start of message component------------------------*/
+.avatar-image {
+  width: 5%;
+  height: 5%;
+  border-radius: 10px; }
+
+.avatar {
+  margin: 0 2rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.4); }
+
+.owner-identity {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: right;
+  margin: 0 1rem; }
+
+.messages {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  top: 50%; }
+
+.message-wrapper {
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.08); }
+
+.message-box-interior {
+  display: inline-block; }
+
+.message-box-corner {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff; }
+
+.message-box-owner {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.message-box-corner-owner {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgba(0, 0, 0, 0.1); }
+
+.message-box {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: #fff; }
+
+.owner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.5rem 0.8rem; }
+
+.guest {
+  text-align: left;
+  margin: 0.5rem 0.8rem; }
+
+/*-------------------------End of message component------------------------*/
+
+/*# sourceMappingURL=App.css.map */

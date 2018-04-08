@@ -5,6 +5,7 @@ import InputBox from './components/InputBox/InputBox'
 import RenderMessage from './components/Messages/Messages'
 import Login from './components/Login/Login'
 
+
 const generateUniqueID = () => {
   return Math.floor((Math.random() * 10000000) + 1);
 }
@@ -13,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showModal: false,
+      showModal: true,
       currentUser:'Ping',
       // users: {},
       // messages: {},
@@ -43,7 +44,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    // Get users collection from firestore.
+/*---------------------------- Get users collection from firestore.------------------------------*/
     this.usersUnsubscribe = this.props.db.collection("users")
     .onSnapshot((querySnapshot) => {
       const users = {}
@@ -55,14 +56,12 @@ class App extends Component {
         users,
       })
     });
-
-    // Get messages collection from firestore.
+/*---------------------------- Get messages collection from firestore..------------------------------*/
     this.messagesUnsubscribe = this.props.db.collection("messages")
     .onSnapshot((querySnapshot) => {
       const messages = {}
       querySnapshot.forEach(doc => {
         messages[doc.id] = doc.data()
-        // console.log(doc);
       })
       this.setState({
         messages,
@@ -124,9 +123,7 @@ logout = () => {
         showModal={this.state.showModal}
         checkStatus={this.checkStatus}
         />
-        <header className='navBar'>
-          Web Chat-App
-        </header>
+
 
       <Nav
         logout={this.logout}

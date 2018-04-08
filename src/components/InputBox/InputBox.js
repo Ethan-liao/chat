@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Button } from 'reactstrap'
 class InputBox extends Component {
   render() {
     return(
@@ -9,16 +9,16 @@ class InputBox extends Component {
            suppressContentEditableWarning={true}
            spellCheck={true}
            contentEditable={true}
-           className="input box"
+           className="input-box"
            ref={c => { this.messageInput = c}}
-         ><br/></p>
-         <button
-           className="input btn"
+         ></p>
+         <Button outline color="success"
+          //  className="input-btn"
            onClick={e => {
              this.props.onSubmit(this.messageInput.textContent)
              this.messageInput.textContent = '';
            }}
-         >Send</button>
+         >Send</Button>
         </div>
       </div>
     )
