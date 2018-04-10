@@ -15,7 +15,7 @@ class App extends Component {
     super(props)
     this.state = {
       showModal: true,
-      currentUser:'Ping',
+      currentUser:'',
       // users: {},
       // messages: {},
       users: {

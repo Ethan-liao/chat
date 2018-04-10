@@ -18,17 +18,17 @@ class Header extends Component {
 
   render(){
     return(
-      <nav>
+      <nav >
         <Navbar color="faded" light>
           <NavbarToggler  onClick={this.toggleNavbar} className="mr-2" />
           <NavbarBrand href="/" className="mr-auto">Web Chat App</NavbarBrand>
         <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="Profile">Profile</NavLink>
+                <NavLink>Profile</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Settings</NavLink>
+                <NavLink >Settings</NavLink>
               </NavItem>
               <NavItem>
                 <Button outline size="sm" olor="secondary" onClick={this.props.logout}>logout</Button>

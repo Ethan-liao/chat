@@ -4,27 +4,42 @@ Simple chat web-app
 
 [Wireframes](https://drive.google.com/file/d/17H_zwJlbnNGr8MAUDgB9Ek64rSAkVYIT/view?usp=sharing)
 
-## Currenlty working on
+### Tech used
+* React
+* Firebase
+* Firestore
+* Sass
+* Bootstrap 4
+
+### Deployed site
+ [Chat-app](https://chat-1d858.firebaseapp.com/)
+
+### Currently working on
+
 #### CSS
-- [ ] styling messages
-- [ ] styling login page
-- [ ] styling layout
+- [x] styling messages
+- [x] styling login page
+- [x] styling layout
 #### Messages
 - [ ] Search bar
 
 #### Login
-- [X] Login with email to differentiate users
-- [ ] Have a seperate login page
+- [x] Login with email to differentiate users
+- [ ] Have a separate login page
 - [ ] User cannot click button if inputbox is blank
 #### Messages
 - [ ] User cannot send message if inputbox is blank
 - [ ] Different chat groups
-- [ ] Add profile pic next to message
-- [ ] Add timeStamp to messages
+- [x] Add profile pic next to message
+- [x] Add timeStamp to messages
 
-## Tech used
-* React
-* Firebase
-* Firestore
+### Future features
 
-Working [link](https://chat-1d858.firebaseapp.com/)
+- Settings page
+ - Upload your own Avatar
+ - Change pw
+
+- Upload feature
+  - Upload images
+
+- Add emojis
